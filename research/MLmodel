@@ -2,26 +2,26 @@ artifact_path: models
 flavors:
   python_function:
     env:
-      conda: conda.yaml
       virtualenv: python_env.yaml
+      conda: conda.yaml
     loader_module: mlflow.sklearn
-    model_path: model.pkl
     predict_fn: predict
+    model_path: model.pkl
     python_version: 3.12.3
   sklearn:
-    code: null
     pickled_model: model.pkl
-    serialization_format: cloudpickle
+    code: null
     sklearn_version: 1.5.2
+    serialization_format: cloudpickle
 mlflow_version: 2.16.0
-model_size_bytes: 15311987
-model_uuid: 72cbf3c28bd6473d9e96671ce4327f7a
-run_id: f42b92f0ac1b49b3b09f833cf02320a7
+run_id: 45fds5r3gfd4534g507qwpoz128abn96
+model_size_bytes: 14964579
+model_uuid: a45s56f497gh6gf6f65d5s6ty1bnj013                   
 saved_input_example_info:
-  artifact_path: input_example.json
-  pandas_orient: split
-  serving_input_path: serving_input_example.json
   type: dataframe
+  pandas_orient: split
+  artifact_path: input_example.json
+  serving_input_path: serving_input_example.json  
 signature:
   inputs: '[{"type": "integer", "name": "age", "required": true}, {"type": "string",
     "name": "job", "required": true}, {"type": "string", "name": "marital", "required":
@@ -34,4 +34,4 @@ signature:
     {"type": "long", "name": "campaign", "required": true}]'
   outputs: null
   params: null
-utc_time_created: '2024-11-18 19:16:23.096883'
+utc_time_created: '2024-12-23 23:22:15.105283'
