@@ -54,7 +54,7 @@ pip install -r requirements.txt
 
 ```
 структура проекта:
-```
+ ```
  .
  |_____ .venv_my_proj
  |
@@ -72,11 +72,11 @@ pip install -r requirements.txt
  |_____ README.md
  |_____ requirements.txt  
 
- ``
-
- # Описание сервиса
-
  ```
+
+# Описание сервиса
+
+```
  Cодержимое директории ml_service:
  - requirements.txt - зависимости для сборки образа
  - main.py - FastAPI-приложение, обрабатывающее GET и POST запрос
