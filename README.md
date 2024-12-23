@@ -49,3 +49,75 @@ pip install -r requirements.txt
 ```
 'num__age', 'num__day', 'num__duration', 'cat__default', 'cat__housing', 'cat__loan', 'cat__contact', 'cat__month', 'cat__campaign'
 ```
+
+# Описание сервиса предсказаний
+
+```
+структура проекта:
+```
+IIS
+ |_____ .venv_IIS
+ |
+ |_____ services
+ |       |___ ml_service
+ |       |      |___main.py
+ |       |      |___api_handler.py
+ |       |      |___Dockerfile
+ |       |      |___requirements.txt  
+ |       |___models
+ |              |___get_model.py
+ |              |___model.pkl   
+ |              
+ |_____ .gitignore
+ |_____ README.md
+ |_____ requirements.txt
+ ``
+
+ # Описание сервиса
+
+ ```
+ Cодержимое директории ml_service:
+ - requirements.txt - зависимости для сборки образа
+ - main.py - FastAPI-приложение, обрабатывающее GET и POST запрос
+ - .dockerignore - исключения для Docker
+ - api_handler.py - класс-обработчик запросов к API FastAPIHandler
+ - Dockerfile - файл для автоматизации сборки образа
+
+  Cодержимое директории models:
+  - get_model.py - скрипт , который подключается к mlflow, выгружает модель по её run_id и сохраняет ее в файл model.pkl
+  ```
+
+#  Команды для создания образа и запуска контейнера
+
+```
+foo@bar:~$ docker build . --tag estate_model:1
+foo@bar:~$ docker run -p 8001:8000 -v $(pwd)/../models:/models estate_model:1
+
+```
+
+# Проверка работоспособность сервиса
+
+```
+import requests
+import random
+
+params = {'cus_id': 12345}
+data = {
+    "age":          random.randint(1,80),
+    "job":          "housemaid",
+    "marital":	    "married",
+    "education":	"secondary",
+    "default":	    "no",
+    "balance":	    random.randint(1000,1000000),
+    "housing":	    "yes",
+    "loan":	        "no",
+    "contact":	    "cellular",
+    "day":	        random.randint(1,10),
+    "month":	    "aug",
+    "duration":     699,
+    "campaign":     2
+    } 
+
+response = requests.post('http://127.0.0.1:8001/api/prediction', params=params, json=data)
+print(response.json())
+```

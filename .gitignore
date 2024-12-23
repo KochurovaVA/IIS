@@ -1,3 +1,8 @@
 *.csv
 *.pkl
 .venv*
+.venv_IIS/
+/data/*
+/mlflow/*
+!/mlflow/start_mlflow_server.sh
+__pycache__*
