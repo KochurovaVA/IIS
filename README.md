@@ -114,8 +114,8 @@ data = {
     "contact":	    "cellular",
     "day":	        random.randint(1,10),
     "month":	    "aug",
-    "duration":     699,
-    "campaign":     2
+    "duration":     579,
+    "campaign":     3
     } 
 
 response = requests.post('http://127.0.0.1:8001/api/prediction', params=params, json=data)
