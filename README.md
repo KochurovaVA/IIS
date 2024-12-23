@@ -95,25 +95,25 @@ foo@bar:~$ docker run -p 8001:8000 -v $(pwd)/../models:/models estate_model:1
 
 ```
 
-# Проверка работоспособность сервиса
+# Проверка работоспособности сервиса
 
 ```
 import requests
 import random
 
-params = {'cus_id': 12345}
+params = {'cus_id': 157}
 data = {
-    "age":          random.randint(1,80),
+    "age":          random.randint(1,65),
     "job":          "housemaid",
     "marital":	    "married",
     "education":	"secondary",
     "default":	    "no",
-    "balance":	    random.randint(1000,1000000),
+    "balance":	    random.randint(5000,120000),
     "housing":	    "yes",
     "loan":	        "no",
     "contact":	    "cellular",
-    "day":	        random.randint(1,10),
-    "month":	    "aug",
+    "day":	        random.randint(3,15),
+    "month":	    "jun",
     "duration":     579,
     "campaign":     3
     } 
