@@ -52,27 +52,26 @@ pip install -r requirements.txt
 
 # Описание сервиса предсказаний
 
-```
 структура проекта:
- ```
- .
- |_____ .venv_my_proj
- |
- |_____ services
- |       |___ ml_service
- |       |      |___main.py
- |       |      |___api_handler.py
- |       |      |___Dockerfile
- |       |      |___requirements.txt  # новый файл, созданный на этом шаге
- |       |___models
- |              |___get_model.py
- |              |___model.pkl   
- |              
- |_____ .gitignore
- |_____ README.md
- |_____ requirements.txt  
 
- ```
+```
+.
+├── .venv_my_proj
+├── services
+│   ├── ml_service
+|       |      |___main.py
+|       |      |___api_handler.py
+|       |      |___Dockerfile
+|       |      |___requirements.txt  # новый файл, созданный на этом шаге
+|       |___models
+|              |___get_model.py
+|              |___model.pkl  
+|              
+|_____ .gitignore
+|_____ README.md
+|_____ requiremen               
+```
+ 
 
 # Описание сервиса
 
