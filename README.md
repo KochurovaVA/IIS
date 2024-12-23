@@ -55,22 +55,23 @@ pip install -r requirements.txt
 ```
 структура проекта:
 ```
-IIS
- |_____ .venv_IIS
+ .
+ |_____ .venv_my_proj
  |
  |_____ services
  |       |___ ml_service
  |       |      |___main.py
  |       |      |___api_handler.py
  |       |      |___Dockerfile
- |       |      |___requirements.txt  
+ |       |      |___requirements.txt  # новый файл, созданный на этом шаге
  |       |___models
  |              |___get_model.py
  |              |___model.pkl   
  |              
  |_____ .gitignore
  |_____ README.md
- |_____ requirements.txt
+ |_____ requirements.txt  
+
  ``
 
  # Описание сервиса
