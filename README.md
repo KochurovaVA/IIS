@@ -59,17 +59,23 @@ pip install -r requirements.txt
 ├── .venv_my_proj
 ├── services
 │   ├── ml_service
-|       |      |___main.py
-|       |      |___api_handler.py
-|       |      |___Dockerfile
-|       |      |___requirements.txt  # новый файл, созданный на этом шаге
-|       |___models
-|              |___get_model.py
-|              |___model.pkl  
-|              
+|   |   |      |___main.py
+|   |   |      |___api_handler.py
+|   |   |      |___Dockerfile
+|   |   |      |___requirements.txt  # новый файл, созданный на этом шаге
+|   |   | 
+|   |   |___models
+|   |          |___get_model.py
+|   |          |___model.pkl 
+|   |    
+|   |── requests
+|        ├── Dockerfile
+|        └── requests.py
+|
+|
 |_____ .gitignore
 |_____ README.md
-|_____ requiremen               
+|_____ requirements.txt               
 ```
  
 
